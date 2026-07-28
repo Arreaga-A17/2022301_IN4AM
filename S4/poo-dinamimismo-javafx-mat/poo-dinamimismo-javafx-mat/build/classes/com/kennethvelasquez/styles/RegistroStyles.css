@@ -1,0 +1,144 @@
+/*
+* ESTILO GLOBAL DE LA PESTAÑA DE REGISTRO
+    Lista de algunos colores:
+    #255c5c
+    #5ae5e5
+    #39e0e0
+    #9cf0f0
+    #c0d3fa
+    #10192a
+    #1a1a1a
+    #5b5b5b
+    #909090
+    #c8c8c8
+    #f23061
+    #f56e90
+    #f55d84
+    #fa8964
+    #39eb92
+    #2b7b53
+*/
+
+.panel-registro{
+      -fx-min-width: 680px;
+}
+
+.panel-registro VBox{
+    -fx-padding:15px;
+    -fx-background-color:#10192a;
+}
+
+.panel-registro GridPane{
+    -fx-background-radius:20px;
+    -fx-min-width:650px;
+    -fx-padding:10px 0px;
+}
+
+.panel-registro Label{
+    -fx-text-fill:#fff;
+    -fx-font-size:20px;
+}
+.panel-registro ComboBox{
+    -fx-font-size:20px;
+    -fx-padding:0px 5px;
+    -fx-min-width:165px;
+    -fx-focus-color:transparent;
+    -fx-faint-focus-color:transparent;
+}
+.panel-registro TextField{
+    -fx-font-size:16px;
+    -fx-min-width:465px;
+}
+
+.panel-registro ComboBox,
+.panel-registro TextField{
+    -fx-border-width:0px ;
+    -fx-border-radius:0px ;
+    -fx-background-radius:0px;
+    -fx-background-color: #fff;
+}
+
+.panel-registro TextField:focused{
+    -fx-border-width:0px 0px 2px 0px;
+    -fx-border-color:#5ae5e5;
+    -fx-border-style:solid;
+    -fx-focus-color:transparent;
+    -fx-faint-focus-color:#5ae5e5;
+}
+
+.check-box .box{
+    -fx-background-color: #ffffff; 
+    -fx-border-color: transparent;    
+    -fx-border-width: 0px;
+    -fx-border-radius: 5px;        
+    -fx-background-radius: 5px;
+    -fx-focus-color: transparent !important;
+    -fx-faint-focus-color: transparent !important;
+}
+.radio-button .radio{
+    -fx-background-color: #ffffff; 
+    -fx-border-color: transparent;    
+    -fx-focus-color: transparent !important;
+    -fx-border-width: 0px;
+    -fx-faint-focus-color: transparent !important;
+}
+.check-box:selected .mark,
+.radio-button:selected .dot{
+     -fx-background-color: #39e0e0;
+}
+
+.panel-registro Button{
+    -fx-font-size:25px;
+    -fx-font-family:"Impact";
+}
+
+.panel-registro .btn-guardar{
+    -fx-background-color: #39eb92;
+}
+
+.panel-registro .btn-limpiar{   
+    -fx-background-color: #f56e90;
+}
+
+.panel-registro Button:pressed{
+    -fx-text-fill:white;
+    -fx-focus-color:transparent;
+    -fx-faint-focus-color:transparent;
+}
+
+.panel-registro .btn-guardar:pressed{
+    -fx-background-color: #2b7b53;
+}
+
+.panel-registro .btn-limpiar:pressed{
+    -fx-background-color: #f23061;
+}
+
+.panel-registro .btn-guardar:hover{
+    -fx-effect: dropshadow(gaussian, #29ab62, 17, 0, 0, 0);
+}
+
+.panel-registro .btn-limpiar:hover{
+    -fx-effect: dropshadow(three-pass-box, #f56e90, 17, 0, 0, 0);
+}
+
+/* Estilo para cada opción  dentro de la lista */
+.combo-box-popup .list-cell {
+    -fx-padding: 7px 10px;         /* Espaciado interno para que no se vea apretado */
+    -fx-text-fill: #333333;       
+    -fx-background-color: #ffffff;
+}
+
+/* Cuando pasas el mouse sobre una opción de la lista */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #c0d3fa; 
+    -fx-text-fill: #000000;
+}
+
+/* La opción que está seleccionada*/
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #909090;
+    -fx-text-fill: #fff;      
+    -fx-font-weight:bold;
+    -fx-font-size:18px;
+}

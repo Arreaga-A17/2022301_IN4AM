@@ -1,0 +1,44 @@
+
+/*
+    .nombreDeClase    agarrar los elementos de esa clase
+    #identificadorUnico      agarra solo un elemento con ese id
+    el codigo es entre llaves {  }
+*/
+
+
+.contenedor-botones {
+    -fx-vgap: 5px;
+    -fx-hgap: 5px;
+}
+.contenedor-botones  Button  {
+    -fx-min-width:   100px;
+    -fx-min-height:  60px;
+    -fx-font-size: 30px;
+    -fx-border-radius:  15px;
+    -fx-background-radius:  15px;
+    -fx-background-color:  #00abaf;
+    -fx-border-color: #0027af;
+}
+
+.contenedor-botones  Button:pressed  {
+    -fx-border-radius:  15px;
+    -fx-background-radius:  15px;
+    -fx-border-color: gray;
+}
+.contenedor-botones  Button:hover  {
+    -fx-background-color:  #1565C070;
+}
+
+.contenedor-botones  Button:focused  {
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+    -fx-background-color:  radial-gradient(
+        center 50% 50%,
+        radius 100%,
+        #64B5F6,
+        #1565C0
+    );
+    -fx-text-fill :white;
+}
+
+

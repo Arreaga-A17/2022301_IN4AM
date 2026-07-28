@@ -1,0 +1,68 @@
+/*
+* ESTILO GLOBAL DE LA VENTANA DEL MENU PRINCIPAL
+    Lista de algunos colores:
+    #255c5c
+    #5ae5e5
+    #39e0e0
+    #9cf0f0
+    #c0d3fa
+    #10192a
+    #1a1a1a
+    #5b5b5b
+    #909090
+    #c8c8c8
+    #f23061
+    #f55d84
+    #f56e90
+    #fa8964
+    #39eb92
+    #2b7b53
+*/
+
+.panel-principal{
+    -fx-font-size: 15px;
+}
+.panel-principal,
+.caja-vertical{
+    -fx-min-height:580px;
+    -fx-min-width:680px;
+}
+
+/*
+    ESTILOS DE SECCION DEL CONTENIDO DE LAS PESTAÑAS
+*/
+.seccion-tabs{
+    -fx-min-height:580px;
+    -fx-min-width:680px;
+    -fx-background-color:#c8c8c8;
+}
+/*
+    USO * PARA INDICAR QUE AFECTE A TODO LO QUE ESTÁ CONTENIDO DENTRO DE seccion-tabs !!!
+*/
+.seccion-tabs *, .seccion-tabs{
+    -fx-faint-focus-color:transparent;
+    -fx-focus-color:transparent;
+}
+
+/*ESTILOS DE PESTAÑAS*/
+/*Indico que de seccion de tabs, elijo el objeto Tab
+*/
+.tab{
+    -fx-border-width: 0px 0px 4px 0px;
+    -fx-border-color:#255c5c;
+}
+
+.tab:selected{
+    -fx-background-color: #5b5b5b;
+    -fx-font-weight:bold;
+}
+.tab:selected .tab-label{
+    -fx-text-fill: #fff !important;
+}
+
+.tab-header-background{
+    -fx-border-color: #255c5c;
+    -fx-border-width: 0px 0px 4px 0px;
+}
+
+

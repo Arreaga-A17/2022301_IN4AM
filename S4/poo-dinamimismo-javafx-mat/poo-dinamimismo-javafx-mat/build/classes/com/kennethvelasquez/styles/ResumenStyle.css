@@ -1,0 +1,123 @@
+/*
+* ESTILO GLOBAL DE LA PESTAÑA DE REGISTRO
+    Lista de algunos colores:
+    #255c5c
+    #5ae5e5
+    #39e0e0
+    #9cf0f0
+    #c0d3fa
+    #10192a
+    #1a1a1a
+    #5b5b5b
+    #909090
+    #c8c8c8
+    #f23061
+    #f56e90
+    #f55d84
+    #fa8964
+    #39eb92
+    #2b7b53
+*/
+
+.panel-resumen VBox{
+    -fx-padding:15px 10px;
+    -fx-background-color:#10192a;
+}
+
+.panel-resumen .table-view{
+    -fx-min-height:510px;
+    -fx-max-height:510px;
+    -fx-border-width:1px;
+    -fx-border-color:transparent;
+    -fx-border-radius:15px 15px 0px 0px;
+    -fx-background-radius:15px 15px 0px 0px;
+    -fx-focus-color: transparent !important;
+    -fx-faint-focus-color: transparent !important;
+}
+
+/* Eliminar el borde de enfoque celeste al seleccionar la tabla */
+.table-view:focused {
+    -fx-border-width:0px;
+    -fx-border-color: transparent;    
+    -fx-focus-color: transparent !important;
+    -fx-faint-focus-color: transparent !important;
+}
+
+/* Toda la barra superior de títulos */
+.table-view .column-header-background {
+    -fx-border-color: #255c5c;
+    -fx-border-width: 0 0 0px 0; 
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background,
+.table-view .column-header {
+    -fx-border-radius:0px;
+    -fx-background-radius:10px;
+}
+
+.table-view .column-header{
+    -fx-background-color:#1a1a1a;
+    -fx-border-color:transparent;
+    -fx-focus-color: transparent !important;
+    -fx-faint-focus-color: transparent !important;
+    -fx-border-width:1px;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill:#fff;
+    -fx-width:325px;
+}
+
+.table-view .column-header .label,
+.table-view .table-cell{
+    -fx-font-size: 18px;
+}
+
+/* Estilo general para cada celda de texto */
+.table-view .table-cell {    
+    -fx-alignment: center-left; 
+}
+
+/* Filas impares*/
+.table-row-cell:odd{
+    -fx-background-color: #909090;
+}
+
+/* Filas pares */
+.table-row-cell:even{
+    -fx-background-color: #c8c8c8;
+}
+/* Filas impares*/
+.table-cell:odd{
+    -fx-text-fill: #ffffff;
+}
+
+/* Filas pares */
+.table-cell:even{
+    -fx-text-fill: #000000 ;
+}
+
+/* Al pasar el cursor sobre cualquier fila */
+.table-row-cell:hover,
+.table-row-cell:hover .table-cell{
+    -fx-background-color: #9cf0f0;
+    -fx-text-fill: #10192a;
+}
+
+/* --- FILA SELECCIONADA  --- */
+.table-view .table-row-cell:selected,
+.table-view .table-row-cell:selected .table-cell{
+    -fx-background-color: #255c5c !important; 
+    -fx-text-fill:#fff;
+    -fx-font-weight:bold;
+}
+
+/* Quita las líneas divisorias de las filas vacías al final de la tabla */
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+}
+.table-row-cell:empty .table-cell {
+    -fx-border-color: transparent;
+}
+
