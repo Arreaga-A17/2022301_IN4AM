@@ -4,6 +4,7 @@
  */
 package com.JoseArreaga.examb3.Model;
 
+import com.JoseArreaga.examb3.Conexiondb.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,10 +16,28 @@ import java.sql.SQLException;
  */
 public class UsuarioDAO {
 
+
+    public int obtenerIdUsuario(String username, String password) {
+        String sql = "SELECT id_usuario FROM usuarios WHERE username = ? AND password = ?";
+        try (java.sql.Connection con = Conexion.getConnection(); // Verifica si tu método de conexión se llama así
+                 java.sql.PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setString(1, username);
+            ps.setString(2, password);
+
+            java.sql.ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return rs.getInt("id_usuario"); 
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1; 
+    }
+
     public boolean registrarUsuario(Usuario usuario) {
         String sql = "INSERT INTO usuarios (nombre_completo, username, correo, password) VALUES (?, ?, ?, ?)";
 
-        // Uso de try-with-resources para cerrar la conexion automaticamente
         try (Connection con = Conexion.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
 
             ps.setString(1, usuario.getNombreCompleto());
@@ -44,7 +63,7 @@ public class UsuarioDAO {
             ps.setString(2, password);
 
             try (ResultSet rs = ps.executeQuery()) {
-                return rs.next(); // Retorna true si encontro al usuario
+                return rs.next(); 
             }
 
         } catch (SQLException e) {

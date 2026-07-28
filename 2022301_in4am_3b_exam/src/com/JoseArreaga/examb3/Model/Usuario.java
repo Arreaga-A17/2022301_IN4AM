@@ -26,7 +26,6 @@ public class Usuario {
     public Usuario() {
     }
 
-    // Getters y Setters
     public int getIdUsuario() {
         return idUsuario;
     }
